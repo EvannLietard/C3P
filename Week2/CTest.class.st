@@ -9,7 +9,7 @@ Class {
 CTest >> testBar [
 	|c|
 	c:=C new.
-	self assert: c bar equals: 50.
+	self assert: c bar equals: 100.
 ]
 
 { #category : 'tests' }

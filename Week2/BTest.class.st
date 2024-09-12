@@ -9,7 +9,7 @@ Class {
 BTest >> testBar [
 	|b|
 	b:=B new.
-	self assert: b bar equals: 10.
+	self assert: b bar equals: 20.
 ]
 
 { #category : 'tests' }
