@@ -8,14 +8,29 @@ Class {
 	#package : 'Week2'
 }
 
+{ #category : 'as yet unclassified' }
+DiceHandle >> + aDiceHandle [ 
+	| newHandle |
+	newHandle := self class new. 
+	self dices do: [ :die | newHandle addDice: die ].
+	aDiceHandle dices do: [ :die | newHandle addDice: die ].
+	^ newHandle 
+
+]
+
 { #category : 'adding' }
 DiceHandle >> addDice: aDice [ 
 	dices add: aDice .
 ]
 
-{ #category : 'accesing' }
+{ #category : 'accessing' }
 DiceHandle >> diceNumber [
 	^dices size.
+]
+
+{ #category : 'accessing' }
+DiceHandle >> dices [
+	^ dices
 ]
 
 { #category : 'initialization' }
