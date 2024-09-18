@@ -22,3 +22,10 @@ DiceHandle >> diceNumber [
 DiceHandle >> initialize [ 
 	dices := OrderedCollection new.
 ]
+
+{ #category : 'as yet unclassified' }
+DiceHandle >> roll [ 
+    "Lance tous les dés du handle et retourne la somme des résultats."
+    ^dices sum: [ :dice | dice roll ].
+
+]

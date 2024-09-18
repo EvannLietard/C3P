@@ -34,6 +34,16 @@ Dice >> initialize [
 	faces:=6.
 ]
 
+{ #category : 'printing' }
+Dice >> printOn: aStream [
+    "Ajoute une représentation textuelle du dé avec le nombre de faces."
+    super printOn: aStream.
+    aStream
+        nextPutAll: '(';
+        print: faces;
+        nextPutAll: ')'.
+]
+
 { #category : 'as yet unclassified' }
 Dice >> roll [ 
     ^faces atRandom

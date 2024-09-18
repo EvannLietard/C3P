@@ -27,3 +27,15 @@ yourself.
 self assert: handle diceNumber equals: 2.
 
 ]
+
+{ #category : 'tests' }
+DiceHandleTest >> testRoll [ 
+    | handle dice1 dice2 result |
+    handle := DiceHandle new.
+    dice1 := Dice withFaces: 6.
+    dice2 := Dice withFaces: 10.
+    handle addDice: dice1.
+    handle addDice: dice2.
+    result := handle roll.
+    self assert: (result between: 2 and: 16).
+]
