@@ -41,6 +41,11 @@ DiceHandleTest >> testRoll [
 ]
 
 { #category : 'tests' }
+DiceHandleTest >> testSimpleHandle [
+self assert: 2 D20 diceNumber equals: 2.
+]
+
+{ #category : 'tests' }
 DiceHandleTest >> testSumOfHandles [
 | hd1 hd2 hd3 |
 hd1 := DiceHandle new
@@ -52,4 +57,11 @@ addDice: (Dice withFaces: 10); yourself.
 hd3 := hd1 + hd2.
 self assert: hd3 diceNumber equals: 4.
 
+]
+
+{ #category : 'tests' }
+DiceHandleTest >> testSumming [
+| handle |
+	handle := 2 D20 + (3 D:10).
+	self assert: handle diceNumber equals: 5.
 ]
