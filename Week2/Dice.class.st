@@ -8,9 +8,24 @@ Class {
 	#package : 'Week2'
 }
 
+{ #category : 'as yet unclassified' }
+Dice class >> withFaces: aNumber [
+"Create and initialize a new die with aNumber faces."
+	| instance |
+	instance := self new.
+	instance faces: aNumber.
+	^ instance
+
+]
+
 { #category : 'accessing' }
 Dice >> faces [
 	^ faces
+]
+
+{ #category : 'accessing' }
+Dice >> faces: aNumber [
+	faces:=aNumber .
 ]
 
 { #category : 'initialization' }

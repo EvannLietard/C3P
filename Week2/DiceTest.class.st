@@ -6,6 +6,12 @@ Class {
 }
 
 { #category : 'tests' }
+DiceTest >> testCreationIsOk [
+	self assert: (Dice withFaces: 20) faces equals: 20
+
+]
+
+{ #category : 'tests' }
 DiceTest >> testInitializeOk [
 
 	self assert: Dice new faces equals:6. 
